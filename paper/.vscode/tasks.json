@@ -1,0 +1,9 @@
+{
+	"version": "0.1.0",
+	"command": "pdflatex",
+	"isShellCommand": true,
+	// Show the output window only if unrecognized errors occur.
+	"showOutput": "always",
+	"args": ["paper.tex"],
+	"problemMatcher": ""
+}
