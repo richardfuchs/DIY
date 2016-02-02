@@ -8,37 +8,36 @@
   \label{lcdaufbau}
 \end{figure}
 
-Das Display besteht aus zwei zusammengeklebten Glasplatten mit einem Abstand von circa 10 Mikrometer. Auf den Glasplatten befinden sich leitende Schichten aus Indium-Zinn-Oxid. Diese Schichten werden später zur Darstellung von Zeichen verwendet. Grundsätzlicher Aufbau eines LCD Displays (siehe Abbildung \ref{lcdaufbau}):
+Das Display besteht aus zwei zusammengeklebten Glasplatten mit einem Abstand von circa 10 Mikrometer. Auf den Glasplatten befinden sich leitende Schichten aus Indium-Zinn-Oxid. Diese Schichten werden später zur Darstellung von Zeichen verwendet. Grundsätzlicher Aufbau eines LCD Displays besteht aus folgenden Teilen(siehe Abbildung \ref{lcdaufbau}):
 \begin{itemize}
-\item Glasplatten, die sich gegenüber liegende Innenseiten jeweils mit leitender Schicht bezogen 
-\item Zwischen den Glasplatten: Flüssigkristall
-\item Außen: Polarisationsfolien
+\item zwei Glasplatten, die sich gegenüber liegende Innenseiten jeweils mit leitender Schicht bezogen 
+\item zwischen den Glasplatten: Flüssigkristall
+\item außerhalb der Glasplatten: Polarisationsfolien
 \end{itemize}
-Die Glasplatten werden so präpariert, dass die zigarrenförmige Moleküle auf jeweils einer Glasplatte in eine Richtung zeigen, auf der gegenüberliegenden Seite sind sind um 90 Grad gedreht. Flüssigkristall beschreibt somit eine “Schraubenstruktur”. Diese verschraubte Struktur veranlasst polarisiertes Licht, ihr zu folgen. Ohne Spannung wird Polarisationsebene um 90 Grad gedreht  und das Licht wird durchgelassen. Beim Anlegen von Spannung (ca. 3V Wechselspannung -> siehe Kap. Elektronik/Ansteuerung): Moleküle richten sich kollektiv senkrecht zu Elektroden aus, also existiert für das Polarisationslicht somit keine Schraubenstruktur mehr. Folglich wird beim Durchgang durch die Zelle der Polarisationszustand nicht beeinflusst. Was schließlich dazu führt, dass die Bereiche jetzt dunkel erscheinen (Quellen: Bauanleitung und https://www.cmb-systeme.de/technikwissen/aufbau-und-funktion-einer-lcd-zelle)
-
+Die Glasplatten werden so präpariert, dass die zigarrenförmige Moleküle auf jeweils einer Glasplatte in eine Richtung zeigen, auf der gegenüberliegenden Seite sind sie um 90 Grad gedreht. Flüssigkristall beschreibt somit eine “Schraubenstruktur”. Diese verschraubte Struktur veranlasst polarisiertes Licht, ihr zu folgen. Ohne Spannung wird Polarisationsebene um 90 Grad gedreht  und das Licht wird durchgelassen. Beim Anlegen von Spannung (ca. 3V Wechselspannung -> siehe Kapitel \ref{sec:elektronik}): Moleküle richten sich kollektiv senkrecht zu Elektroden aus, also existiert für das Polarisationslicht somit keine Schraubenstruktur mehr. Folglich wird beim Durchgang durch die Zelle der Polarisationszustand nicht beeinflusst, was schließlich dazu führt, dass die Bereiche dunkel erscheinen (Quellen: Bauanleitung und https://www.cmb-systeme.de/technikwissen/aufbau-und-funktion-einer-lcd-zelle)
 
 \subsection{Produktionsschritte}
 Schritt 1: Strukturierung der Elektroden, um Bereich, die leuchten sollen, abzudecken.\\
-Schritt 2: Wegätzen der beschichteten Bereiche, die nicht leuchten sollen (mit 3-5\% Salzsäure), sodass die braune Färbung verschwindet.\\
-Schritt 3: Entfernen der Abdeckschicht (Klebefolie - siehe Kap.XXX), dabei werden Klebereste mit Aceton entfernt.\\
+Schritt 2: Wegätzen der beschichteten Bereiche, die nicht leuchten sollen (mit 3-5\% Salzsäure), sodass die braune Färbung der Glasplatten verschwindet.\\
+Schritt 3: Entfernen der Abdeckschicht (Klebefolie, siehe Abschnitt \ref{subsec:klebefolie}), dabei werden Klebereste mit Aceton entfernt.\\
 Schritt 4: Oxidieren der Indium-Zinn-Schicht (im Ofen bei 300 Grad), damit die Glasplatten soweit wie möglich transparent erscheinen.\\
 Schritt 5: Reinigung der Glasplatten durch das Kochen dieser in einem im Verhältnis 1:5 verdünnten alkalischen tensidfreien Reinigungsbad 3 bis 5 Minuten, damit die Glasplatten komplett fettfrei werden. Dabei werden auch Siedesteinchen verwendet, um einen Siedeverzug zu vermeiden.\\
-Schritt 6: Orientierung der Glasoberfläche durch sogenanntes {\quote Reiborientieren}. Dabei wird je eine Oberfläche mit einem Zellstofftuch in eine bestimmte Richtung gerieben, dabei sind beide Oberflächen jeweils senkrecht zueinander ausgerichtet. \\
-Schritt 7: Zwischen die Glasplatten werden Abstandshalter (am Rand) eingelegt, damit diese sich später mit einem Abstand von ca. 10 bis 15 Mikrometer  gegenüberliegen. Hier einigt sich Folie von z.B. Zigarettenschachteln, weil diese eine Dicke von ca. 12 Mikrometer aufweist.\\
-Schritt 8: Die Glasplatten werden mit den Abstandshaltern übereinandergelegt. Dabei sollen sich die leitenden Seiten der Glasplatten gegenüberliegen. Danach werden zunächst sich zwei gegenüberliegenden Seiten der Glasplatten mit einem Zweikomponent-Kleber verklebt. Dabei sollen die Glasplatten im Bereich der Abstandshalter zusammengepresst werden, um den Abstand zu bewahren, ansonsten zeigt die Zelle später eine langsamere elektrooptische Reaktion. \\
+Schritt 6: Orientierung der Glasoberfläche durch sogenanntes {\quote Reiborientieren}. Dabei wird je eine Oberfläche mit einem Zellstofftuch in eine bestimmte Richtung gerieben, sodass beide Oberflächen jeweils senkrecht zueinander ausgerichtet sind. \\
+Schritt 7: Zwischen den Glasplatten werden Abstandshalter (am Rand) eingelegt, damit diese sich später mit einem Abstand von ca. 10 bis 15 Mikrometer  gegenüberliegen. Hier einigt sich Folie von z.B. Zigarettenschachteln, weil diese eine Dicke von ca. 12 Mikrometer aufweist.\\
+Schritt 8: Die Glasplatten werden mit den Abstandshaltern übereinandergelegt. Dabei sollen sich die leitenden Seiten der Glasplatten gegenüberliegen. Danach werden zunächst sich zwei gegenüberliegenden Seiten der Glasplatten mit einem Zweikomponent-Kleber verklebt. Hierbei sollen die Glasplatten im Bereich der Abstandshalter zusammengepresst werden, um den Abstand zu bewahren, ansonsten zeigt die Zelle später eine langsamere elektrooptische Reaktion. \\
 Schritt 9: An einer der noch offenen Seiten wird nun der Flüssigkristall durch Kapillarwirkung eingefüllt. Es werden Tropfen des  Flüssigkristalls an die noch offene Kanten gesetzt, und der Flüssigkristall zieht selber in die Zelle ein. Anschließend werden die noch offenen Kanten mit dem Kleber verschlossen.	
 (Quelle: Bauanleitung)
 
 \subsection{Elektrodenstrukturaufbringung}
 \subsubsection*{Fotolack}
-\subsubsection*{Klebefolie}
-Muster werden entworfen und mit einem Plotter aus einer selbstklebenden Klebefolie ausgeschnitten. Das Muster wird auf einer Übertragungsfolie aufgebracht und auf die leitende Schicht der Glasplatten aufgeklebt, anschließend wird die Übertragungsfolie abgezogen. Nun sind alle Bereiche, die später leuchten sollen, abgedeckt.
+\subsubsection*{Klebefolie}\label{subsec:klebefolie}
+Muster werden entworfen und mit einem Plotter aus einer selbstklebenden Klebefolie ausgeschnitten. Das Muster wird auf einer Übertragungsfolie aufgebracht und auf die leitende Schicht der Glasplatten aufgeklebt, anschließend wird die Übertragungsfolie abgezogen. Nun sind alle Stellen, die später leuchten sollen, abgedeckt.
 \subsubsection*{Edding/Tesa}
 Eine weitere Möglichkeit, die später zu leuchtende Stellen abzudecken, ist mit Hilfe von Tesa oder durch das direkte Aufmalen von Strukturen mit einem wasserfesten Edding. Diese Verfahren sind zwar einfacher, allerdings entstehen hierbei keine so scharfen Kanten wie durch eine Folie.
 \subsection{Ätzen der Struktur}
 \subsubsection*{Salzsäure}
 \subsection*{Platinenätzmittel}
-Das Wegätzen der Indium-Zinn Schicht ist auch durch das Ätzbad möglich, dass im FAUFabLab zum Ätzen von Platinen verwendet wird. Dazu wird eine Natriumpersulfatlösung verwendet und nach ca. 20 Minuten war bei unserem Versuch die leitende Indium-Zinn-Schicht entfernt. Diese Methode stellt also eine gute Alternatie zur Salzsäure dar.
+Das Wegätzen der Indium-Zinn Schicht ist auch durch das Ätzbad möglich, welches im FAUFabLab zum Ätzen von Platinen verwendet wird. Dazu wird eine Natriumpersulfatlösung verwendet und nach ca. 20 Minuten war bei unserem Versuch die leitende Indium-Zinn-Schicht entfernt. Diese Methode stellt also eine gute Alternatie zur Salzsäure dar.
 
 \begin{figure}[t]
   \centering
@@ -67,7 +66,4 @@ Hitze(Ofen), Hitze(Heisluftfön), \(H_2O_2\), \(H_2O_2\) erhitzt
 \subsection{Verkleben und befüllen}
 2-K Kleber, Abstandhalter, Einfüllen des LCD
 \subsection{Anzeigefähigkeit}
-Selbst die kleinste Zuleitung (Dicke 1mm) bei denkleinen Rechtecken versorgt diese sicher mit Spannung und diese können somit angezeigt werden.
-Die kleinste Struktur beim Strukturtest wird ohne Probleme angezeigt (Dicke 0,4mm).
-Der Grund dafür sind die scharfen Kanten die durch den Folienplott erreicht werden können. Die Ausrichtung ist gut möglich, da die Struktur nach der Oxidierung der Glasplatten noch leicht aber gut sichtbar ist.
-Komplexe Strukturen (Walter White, Darth Vader, Jürgen) können ohne Probleme angezeigt werden. Vermutlich könnten diese noch verkleinert werden und dennoch ohne Probleme angezeigt werden.
+Selbst die kleinste Zuleitung (Dicke 1mm) bei den kleinen Rechtecken versorgt diese sicher mit Spannung und sie können somit angezeigt werden. Die kleinste Struktur beim Strukturtest wird ohne Probleme angezeigt (Dicke 0,4mm). Der Grund dafür sind die scharfen Kanten, die durch den Folienplott erreicht werden können. Die Ausrichtung ist gut möglich, da die Struktur nach der Oxidierung der Glasplatten noch leicht, aber dennoch gut sichtbar ist. Komplexe Strukturen (Walter White, Darth Vader, Jürgen) können ebenso ohne Probleme angezeigt werden. Vermutlich könnten diese noch verkleinert werden und dennoch ohne Probleme angezeigt werden.
