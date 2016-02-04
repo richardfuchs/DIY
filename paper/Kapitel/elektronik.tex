@@ -52,14 +52,13 @@ Zusammenfassend sind also folgende Ansteuerparameter optimal für die Ansteuerun
 Als Spannungsversorgung könnten somit 2 Standard Batterien mit je 1,5V verwendet werden. Diese sinken durch Entladung auf eine Mindestspannung von 0,9V ab. Dadurch wird die Anzeige nicht bis zur vollen Entladung der Batterien halten. Je nach Wahl des Mikrocontroller kommt dieser auch nicht mit 1,8V Spannung aus. Deshalb haben wir uns entschieden drei Batterien mit je 1,5V einzusetzen.
 
 \subsection{Anbindung}
-noch Klärungsbedarf siehe googledocs
+Um das LCD Display mit der Ansteuerplatine zu verbinden gibt es mehrere Möglichkeiten. Da nur ein sehr geringer Strom (μA) fließt und eine Spannung von 3V angelegt wird ist nur eine dünne Drahtzuleitung (0,5mm²) von Nöten. Im folgenden werden verschiedene Verfahren erklärt, die wir uns überlegt und zum Teil auh ausprobiert haben.
 
 \subsubsection{Klemmen}
 Im ersten Test wurde das Display über Klemmen angesteuert. Dies hat einwandfrei funktioniert, jedoch beschädigen die Klemmen die Glasplatten und stellen somit keine gute Endlösung dar.
 
 \subsubsection{Conductive Paint}
-Conductive Paint ist eine schwarze Farbe, die flüssig aus der Tube kommt und circa 15 Minuten zum Trocknen braucht. Jedoch ist die Festigkeit zu schwach und kann die Drähte nicht fest an den Glasplatten fixieren. Deshalb muss noch eine zusätzliche Schicht Kleber (2-Komponentenkleber, Sekundenkleber) darüber angebracht werden, um die Festigkeit zu steigern.
-http://www.bareconductive.com/shop/electric-paint-10ml/
+Conductive Paint ist eine schwarze leitfähige Farbe die von der Firma bareconductive hergestellt wird. Die Flüssigkeit kommt aus der Tube und braucht circa 15 Minuten zum Trocknen. Jedoch ist die Festigkeit zu schwach und kann die Drähte nicht fest an den Glasplatten fixieren. Deshalb muss noch eine zusätzliche Schicht Kleber (2-Komponentenkleber, Sekundenkleber) darüber angebracht werden, um die Festigkeit zu steigern.
 
 \subsubsection{Kupferfolie}
 Kupferfolie wäre eine weitere Idee, die wir allerdings noch nicht ausprobiert haben.
@@ -68,7 +67,7 @@ Kupferfolie wäre eine weitere Idee, die wir allerdings noch nicht ausprobiert h
 \subsection{Platine}
 
 \subsubsection{Anforderungen}
-Die Platine dienst zur Ansteuerung des LCD und soll es ermöglichen, die Uhr zu stellen und die richtige Uhrzeit anzuzeigen. Nicht nur im BCD Format, sondern auch in anderen Formaten.
+Die Platine dienst zur Ansteuerung des LCD und soll es ermöglichen, die Uhr zu stellen und die richtige Uhrzeit anzuzeigen. Es soll die Möglichkeit geben das Display nicht nur im BCD Format zu betreiben, sondern auch in anderen Formaten, wie z.B. rein binär.
 
 \subsubsection{Wahl des Mikrocontrollers}
 Der Mikrocontroller muss mind. 2 Eingänge für 2 Taster zur Uhrzeitstellung zur Verfügung stellen. Des Weiteren werden 4 weitere Pins für den Anschluss der ISP Schnittstelle zum Programmieren des Mikrocontrollers benötigt. Je nach Anzahl der anzuzeigenden Symbole und ob das Multiplexverfahren verwendet wird oder nicht,  sind noch zustätzliche Ausgänge nötig. Wenn man den Mikrocontroller der Atmel-Reihe verwendet, ist des Weiteren auf die Endbezeichnung {\quote P} zu achten, da der Mikrocontroller dann stromsparender ist. Außerdem muss der Versorgungsspannungsbereich in dem von der Batterie zur Verfügung gestelltem Bereich liegen.
@@ -77,4 +76,9 @@ Der Mikrocontroller muss mind. 2 Eingänge für 2 Taster zur Uhrzeitstellung zur
 Um die Uhrzeit so exakt wie möglich zu erhalten, wurde eine spezieller 32,7 kHz Quartz verwendet, der auf Uhrenandwendungen spezialisiert ist. Bis auf den Mikrokontroller und dem Quartz wurden nur SMD Bauteile verwendet, um die Platine zu einem späteren Zeitpunkt komplett auf SMD Bauteile umstellen zu können. Zum Entprellen der Taster wurde jeweils ein 100nF Kondensator parallel geschlossen. Der Eingang der Spannungsversorgung (VCC, AVCC) wurde ebenfalls mit je einem 100nF Kondensator versehen, um eine stabile Eingangsspannung zu gewährleisten. Der Pin Aref wurde über einen Kondensator mit 100nF auf Masse gezogen. Dieser Kontakt kann dazu genutzt werden, um den Batteriestand festzustellen. Für die SMD Bauteile wurde eine Größe von 0805 gewählt. 
 
 \subsubsection{Herstellung der Platine}
-noch Klärungsbedarf! Siehe googledocs
+{\b Sicherheithinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen. Das Ätzbad kann Löcher in der Kleidung verursachen, weshalb es ratsam ist alte Kleidung zu tragen.
+
+
+Das Platinenlayout wurde mit der kostenlosen Version von Eagle erstellt. Die Platine wurde komplett im FAUFablab geätzt und bestückt. Die Leiterbahndicke beträgt 16mil, der Abstand der Massefläche zu den Leiterbahnen beträgt ebenfalls 16mil. Die Bohrlochdurchmesser der Vias und Löcher zum aufstecken der Bauteile beträgt 0,9mm. Das Boardlayout wurde auf Papier im FAUFabLab ausgedruckt und auf die kupferbeschichtete Seite der Platine gelegt. Anschließend werden sie zusammen für 09:40min in den Belichter gelegt.  Wichtig ist, dass man die Platinen vor dem Belichten an den Rändern entgratet, um ein gutes Belichtungsergebnis zu erreichen. Zudem darf man nicht vergessen die Schutzfolie auf der Kupferseite die mit dem Fotolack beschichtet ist abzunehmen. Anschließend kommt die Platine in den Entwickler (NaOH) bis sich der Fotolack an den Stellen, an denen er mit UV-Licht belichtete wurde, ablöst. Nachdem die Platine gut mit Wasser abgespült ist, wird sie in das Ätzbad (Natriumpersulfatlösung) gelegt. Wenn sich die Kupferschicht zwischen den Leiterbahnen komplett abgelöst hat sollte die Platine entnommen werden. Belässt man sie zu lange im Ätzbad besteht die Gefahr, dass zusätzlich Leiterbahnen angeätzt werden. Anschließend die Platine gut mit Wasser abwaschen und für 1:30min in den Belichter legen. Dannach noch ein letztes mal entwickeln und gut abwaschen. Anschließend die Platine ins Verzinnungsbad (Bungard SurTin chemische Verzinnungslösung) geben, um die Kupferschicht vor Korrosion zu schützen. Nun können die Löcher bebohrt und die Platine bestückt werden.
+Wenn das Ätz- oder Verzinnungsbad zu alt ist kann dies zu schlechten Ergebnissen führen.
+Weitere Informationen zur Herstellung von Platinen und bis zu welcher Leiterbahndicke die Herstellung möglich ist gibt es auf der Homepage des FAUFabLab.
