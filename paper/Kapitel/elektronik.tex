@@ -6,6 +6,7 @@ Das LCD Display sollte mit einer Rechteck-Wechselspannung angesteuert werden. Gl
 Hierbei gibt es zwei ausschlaggebende Kriterien:
 \begin{itemize}
 \item Welche Spannung ist nötig um ein schönes Bild zu erhalten.
+%FIXME schönes ist ein subjekives wort
 \item Bei welcher Spannung zieht das Display wie viel Stromstärke, um einen möglichst geringe Leistung zu erhalten.
 \end{itemize}
 \begin{table}[]
@@ -27,7 +28,9 @@ Hierbei gibt es zwei ausschlaggebende Kriterien:
 
 
 Unter einer Rechteck-Wechselspannung von 2V wird die Anzeige zu schwach, um klar etwas zu erkennen. Mit steigender Spannung nimmt nur die Schnelligkeit zu, mit der das Anzeigefeld angezeigt wird, die Intensität nimmt nicht weiter zu. Ab einer Spannung von 6V besteht die Gefahr, dass auch benachbarte Felder aufleuchten. So wurde bei unserem Testdesign {\quote Darth Vader} auf Platte 1 und die {\quote kleinen Rechtecken} auf Platte 2 angeschlossen. Die kleinen Rechtecken haben aufgeleuchtet.\\
-Die Stromstärken haben wir mit einem Multimeter gemessen. Im Ruhezustand hat das Messgerät bereits einen Strom von -2uA angezeigt. Wir bewegen uns im Microampereberreich weshalb die folgenden Messwerte nur als Richtwerte zu verstehen sind. Sie spiegeln aber sehr gut wieder, dass ein LCD sehr energiesparend ist.
+Die Stromstärken haben wir mit einem Multimeter gemessen. Im Ruhezustand hat das Messgerät bereits einen Strom von -2uA 
+%FIXME uA -> micrometer
+ angezeigt. Wir bewegen uns im Microampereberreich weshalb die folgenden Messwerte nur als Richtwerte zu verstehen sind. Sie spiegeln aber sehr gut wieder, dass ein LCD sehr energiesparend ist.
 
 TABELLE
 
@@ -74,9 +77,12 @@ Der Mikrocontroller muss mind. 2 Eingänge für 2 Taster zur Uhrzeitstellung zur
 
 \subsubsection{Wahl der anderen Bauteile}
 Um die Uhrzeit so exakt wie möglich zu erhalten, wurde eine spezieller 32,7 kHz Quartz verwendet, der auf Uhrenandwendungen spezialisiert ist. Bis auf den Mikrokontroller und dem Quartz wurden nur SMD Bauteile verwendet, um die Platine zu einem späteren Zeitpunkt komplett auf SMD Bauteile umstellen zu können. Zum Entprellen der Taster wurde jeweils ein 100nF Kondensator parallel geschlossen. Der Eingang der Spannungsversorgung (VCC, AVCC) wurde ebenfalls mit je einem 100nF Kondensator versehen, um eine stabile Eingangsspannung zu gewährleisten. Der Pin Aref wurde über einen Kondensator mit 100nF auf Masse gezogen. Dieser Kontakt kann dazu genutzt werden, um den Batteriestand festzustellen. Für die SMD Bauteile wurde eine Größe von 0805 gewählt. 
+%FIXME 0815 wirklich schreiben?
 
 \subsubsection{Herstellung der Platine}
-{\b Sicherheithinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen. Das Ätzbad kann Löcher in der Kleidung verursachen, weshalb es ratsam ist alte Kleidung zu tragen.
+{\b Sicherheitshinweis:} 
+%FIXME nur S wird unterstrichen
+Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen. Das Ätzbad kann Löcher in der Kleidung verursachen, weshalb es ratsam ist alte Kleidung zu tragen.
 
 
 Das Platinenlayout wurde mit der kostenlosen Version von Eagle erstellt. Die Platine wurde komplett im FAUFablab geätzt und bestückt. Die Leiterbahndicke beträgt 16mil, der Abstand der Massefläche zu den Leiterbahnen beträgt ebenfalls 16mil. Die Bohrlochdurchmesser der Vias und Löcher zum aufstecken der Bauteile beträgt 0,9mm. Das Boardlayout wurde auf Papier im FAUFabLab ausgedruckt und auf die kupferbeschichtete Seite der Platine gelegt. Anschließend werden sie zusammen für 09:40min in den Belichter gelegt.  Wichtig ist, dass man die Platinen vor dem Belichten an den Rändern entgratet, um ein gutes Belichtungsergebnis zu erreichen. Zudem darf man nicht vergessen die Schutzfolie auf der Kupferseite die mit dem Fotolack beschichtet ist abzunehmen. Anschließend kommt die Platine in den Entwickler (NaOH) bis sich der Fotolack an den Stellen, an denen er mit UV-Licht belichtete wurde, ablöst. Nachdem die Platine gut mit Wasser abgespült ist, wird sie in das Ätzbad (Natriumpersulfatlösung) gelegt. Wenn sich die Kupferschicht zwischen den Leiterbahnen komplett abgelöst hat sollte die Platine entnommen werden. Belässt man sie zu lange im Ätzbad besteht die Gefahr, dass zusätzlich Leiterbahnen angeätzt werden. Anschließend die Platine gut mit Wasser abwaschen und für 1:30min in den Belichter legen. Dannach noch ein letztes mal entwickeln und gut abwaschen. Anschließend die Platine ins Verzinnungsbad (Bungard SurTin chemische Verzinnungslösung) geben, um die Kupferschicht vor Korrosion zu schützen. Nun können die Löcher bebohrt und die Platine bestückt werden.
