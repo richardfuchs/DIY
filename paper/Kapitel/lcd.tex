@@ -17,6 +17,8 @@ Das Display besteht aus zwei zusammengeklebten Glasplatten mit einem Abstand von
 \end{itemize}
 Die Glasplatten werden so präpariert, dass die zigarrenförmige Moleküle auf jeweils einer Glasplatte in eine Richtung zeigen, auf der gegenüberliegenden Seite sind sie um 90 Grad gedreht. Flüssigkristall beschreibt somit eine “Schraubenstruktur”. Diese verschraubte Struktur veranlasst polarisiertes Licht, ihr zu folgen. Ohne Spannung wird Polarisationsebene um 90 Grad gedreht  und das Licht wird durchgelassen. Beim Anlegen von Spannung (ca. 3V Wechselspannung -> siehe Kapitel \ref{sec:elektronik}): Moleküle richten sich kollektiv senkrecht zu Elektroden aus, also existiert für das Polarisationslicht somit keine Schraubenstruktur mehr. Folglich wird beim Durchgang durch die Zelle der Polarisationszustand nicht beeinflusst, was schließlich dazu führt, dass die Bereiche dunkel erscheinen (Quellen: Bauanleitung und https://www.cmb-systeme.de/technikwissen/aufbau-und-funktion-einer-lcd-zelle)
 
+%FIXME Sollte der Link nicht in die Quellenangabe und dann ein Verweis?
+
 \subsection{Produktionsschritte}
 Schritt 1: Strukturierung der Elektroden, um Bereich, die leuchten sollen, abzudecken.\\
 Schritt 2: Wegätzen der beschichteten Bereiche, die nicht leuchten sollen (mit 3-5\% Salzsäure), sodass die braune Färbung der Glasplatten verschwindet.\\
@@ -29,14 +31,49 @@ Schritt 8: Die Glasplatten werden mit den Abstandshaltern übereinandergelegt. D
 Schritt 9: An einer der noch offenen Seiten wird nun der Flüssigkristall durch Kapillarwirkung eingefüllt. Es werden Tropfen des  Flüssigkristalls an die noch offene Kanten gesetzt, und der Flüssigkristall zieht selber in die Zelle ein. Anschließend werden die noch offenen Kanten mit dem Kleber verschlossen.	
 (Quelle: Bauanleitung)
 
+%FIXME Wie ist das mit der Quellenangabe?
+
 \subsection{Elektrodenstrukturaufbringung}
+
+In diesem Kapitel wird beschrieben, wie die gewünschten Strukturen auf die leitend beschichteten Glasplatten aufgebracht werden können. Hierfür kamen 3 Methoden in Betracht. Mittels eines fotosensitiven Lacks, Folien aus dem Folienplotter des FAUFabLab und per Tesa-Film oder Edding.
+
 \subsubsection*{Fotolack}
+
+Wie bei der Herstellung von Platinen wird auf die leitende Seite der Glasplatten eine Schicht Fotolack aufgetragen. Verwendet wurde POSITIV 20 Lichtemfpindlicher Lack ,erworben bei Conrad Electonics.
+Bei Raumtemperatur muss der Lack für 24h an einem dunklen Ort trocknen. Die Glasplatten sollten zudem vor dem Besprühen gut gereinigt werden, um Fettflecken und andere Verunreinigungen zu entfernen. Ansonsten besteht die Gefahr, dass der Lach nicht gut haftet oder sich schlecht verteilt.
+Auf mehreren Platten wurde der Fotolack in verschiednene Arten aufgetragen. Zum einen wurde von 1 bis zu 5 aufgetragenen Schichten ein Test durchlaufen. Des weiteren wurden die Platten flach auf dem Boden liegend, sowie in einerm 30grad Winkel besprüht.
+Mit letzerer wurde das beste Ergebnis erzielt, da der Lack leicht nachlfließen konnte und sich somit am schönsten verteilt hat. Bei der Schichtdicke war es ausreichend eine einzelne Schicht aufzutragen.
+
+Nun werden die beschichteten Glasplatten in den Belichter gelegt und das Anzeigedesign, welches auf Papier ausgedruckt wurde, auf die beschitete Seite gelegt. Wie beim Belichten von Platinen ist eie Belichtungszeit von 9:40min zu wählen. Da es sich um Glasplatten handelt, auf denen von beiden Seiten Licht durchdringen kann, ist umbedingt darauf zu Achten ein Lichtundruchlässiges Objekt auf die nicht mit Fotolack beschictete Seite zu legen (z.B. eine schwarze Acrylplatte). Ansonsten wird die komplette Fotolackschicht belichtet. Anschließend wird der Fotolack entwickelt (NaOH, siehe Platine ätzen).
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth, keepaspectratio]{Bilder/Fotolackverfahrenbeschichtet}
+  \caption{Mit Fotolack beschichtete Glasplatte}
+  \label{Fotolackbeschichtete Glasplatte}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth, keepaspectratio]{Bilder/Fotolackverfahrengeaetzt}
+  \caption{Fotolackverfahren Aetzung}
+  \label{Fotolackverfahren Aetzung}
+\end{figure}
+
 \subsubsection*{Klebefolie}\label{subsec:klebefolie}
 Muster werden entworfen und mit einem Plotter aus einer selbstklebenden Klebefolie ausgeschnitten. Das Muster wird auf einer Übertragungsfolie aufgebracht und auf die leitende Schicht der Glasplatten aufgeklebt, anschließend wird die Übertragungsfolie abgezogen. Nun sind alle Stellen, die später leuchten sollen, abgedeckt.
 \subsubsection*{Edding/Tesa}
 Eine weitere Möglichkeit, die später zu leuchtende Stellen abzudecken, ist mit Hilfe von Tesa oder durch das direkte Aufmalen von Strukturen mit einem wasserfesten Edding. Diese Verfahren sind zwar einfacher, allerdings entstehen hierbei keine so scharfen Kanten wie durch eine Folie.
+
 \subsection{Ätzen der Struktur}
+
+Um die Elektroden freizulegen muss an allen Stellen, an denen das Display nichts anzeigen soll die leitende Schicht weggeätzt werden. Hierbei stehen zwei Verfahren zur Auswahl.
+
 \subsubsection*{Salzsäure}
+
+Zum Einen lässt sich die Indium-Zinn-Schicht sehr schnell und einfach mit Salsäure (5%) entfernen. Hierfür wird die Glasplatte samt der schützenden Schicht, (Fotolack, Klebefolie oder Edding) in Salzsäure eingelegt. Bereits nach 30s ist der Vorgang beendet. Gegenenfalls können die Platten auch länger im Salsäurebad verweilen. Man erkennt das erfolgreiche Ätzen daran, dass die braune Färbung der leitenden Schicht verschwindet.
+
 \subsection*{Platinenätzmittel}
 Das Wegätzen der Indium-Zinn Schicht ist auch durch das Ätzbad möglich, welches im FAUFabLab zum Ätzen von Platinen verwendet wird. Dazu wird eine Natriumpersulfatlösung verwendet und nach ca. 20 Minuten war bei unserem Versuch die leitende Indium-Zinn-Schicht entfernt. Diese Methode stellt also eine gute Alternatie zur Salzsäure dar.
 
@@ -62,7 +99,10 @@ Das Wegätzen der Indium-Zinn Schicht ist auch durch das Ätzbad möglich, welch
  \caption{Testmuster obere und untere Seite}
  \end{figure}
 
+Letztendlich lässt sich festhalten, dass das Endergebnis bei der Beschichtung mit Fotolack nicht zufriedenstellend ist. Es hat sich als schwierig erwiesen den Lack gleichmäßig aufzubringen, sodass beim Entwickeln und Ätzen alle Stellen gleichmäßig mit dem Chemikalien behandelt werden. Das Endergebnis ergab ein sehr unscharfes Bild, weshalb sich diese Methode als ungeeignet erwies. Mit einem Edding oder Tesa-Film ist die Elektrodenstrukturierung möglich, aber es sind keine komplexen Anzeigesymbole möglich.
+Beim Ätzvorgang liegt der Vorteil der Salzsäure darin, dass sie die Ätzung schneller durchführt. Qualitativ waren keine Unterschiede zu erkennen.
 
+Aufgrund der oben genannten Gründe haben wir das Verfahren mit Klebefolie und die Ätzung per Salszäure zur Herstellung der Displays gewählt.
 
 \subsection{Oxidierung der Glasplatten}
 
