@@ -1,6 +1,6 @@
 \section{Elektronik}\label{sec:elektronik}
 \subsection{Ansteuerung}
-In diesem Kapitel werden verschiedene Arten und Möglichkeiten der Ansteuerung des LCD diskutiert.
+In diesem Kapitel werden verschiedene Arten und Möglichkeiten der Ansteuerung des LCD diskutiert.\\
 
 \subsubsection{Spannungsart}
 Das LCD Display sollte mit einer Rechteck-Wechselspannung angesteuert werden. Gleichspannung würde die Flüssigkristalle auf Dauer unwiederherstellbar elektrolytisch zersetzen und den Display somit unbrauchbar machen.\\
@@ -62,14 +62,13 @@ Um das LCD Display mit der Ansteuerplatine zu verbinden gibt es mehrere Möglich
 Im ersten Test wurde das Display über Klemmen angesteuert. Dies hat einwandfrei funktioniert, jedoch beschädigen die Klemmen die Glasplatten und stellen somit keine gute Endlösung dar.\\
 
 \subsubsection{Conductive Paint}
-Conductive Paint ist eine schwarze leitfähige Farbe die von der Firma bareconductive hergestellt wird. Die Flüssigkeit kommt aus der Tube und braucht circa 15 Minuten zum Trocknen. Jedoch ist die Festigkeit zu schwach und kann die Drähte nicht fest an den Glasplatten fixieren. Deshalb muss noch eine zusätzliche Schicht Kleber (2-Komponentenkleber, Sekundenkleber) darüber angebracht werden, um die Festigkeit zu steigern.
-(http://www.bareconductive.com/shop/electric-paint-10ml/)\\
+\cite[\textit{Conductive Paint}]{conductivepaint} ist eine schwarze leitfähige Farbe die von der Firma bareconductive hergestellt wird. Die Flüssigkeit kommt aus der Tube und braucht circa 15 Minuten zum Trocknen. Jedoch ist die Festigkeit zu schwach und kann die Drähte nicht fest an den Glasplatten fixieren. Deshalb muss noch eine zusätzliche Schicht Kleber (2-Komponentenkleber, Sekundenkleber) darüber angebracht werden, um die Festigkeit zu steigern.\\
 
 \subsubsection{Kupferfolie}
 Kupferfolie wäre eine weitere Idee, die allerdings noch nicht getestet wurde.\\
 
 
-\subsection{Platine}
+\subsection{Platine}\label{subsec:platine}
 
 \subsubsection{Anforderungen}
 Die Platine dienst zur Ansteuerung des LCD und soll es ermöglichen, die Uhr zu stellen und die richtige Uhrzeit anzuzeigen. Es soll die Möglichkeit geben das Display nicht nur im BCD Format zu betreiben, sondern auch in anderen Formaten, wie zum Beispiel rein binär.\\
@@ -81,7 +80,7 @@ Der Mikrocontroller muss mindestens zwei Eingänge für zwei Taster zur Uhrzeits
 Um die Uhrzeit so exakt wie möglich zu erhalten, wurde eine spezieller 32,768\,kHz Quartz verwendet, der auf Uhrenandwendungen spezialisiert ist. Bis auf den Mikrokontroller und dem Quartz wurden nur SMD Bauteile verwendet, um die Platine zu einem späteren Zeitpunkt komplett auf SMD Bauteile umstellen zu können. Zum Entprellen der Taster wurde jeweils ein 100\,nF Kondensator parallel geschlossen. Der Eingang der Spannungsversorgung (VCC, AVCC) wurde ebenfalls mit je einem 100\,nF Kondensator versehen, um eine stabile Eingangsspannung zu gewährleisten. Der Pin Aref wurde über einen Kondensator mit 100\,nF auf Masse gezogen. Dieser Kontakt kann dazu genutzt werden, um den Batteriestand festzustellen. Für die SMD Bauteile wurde eine Größe von 0805 gewählt.\\
 
 \subsubsection{Herstellung der Platine}
-\b{Sicherheitshinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen. Das Ätzbad kann Löcher in der Kleidung verursachen, weshalb es ratsam ist alte Kleidung zu tragen.\\
+\textbf{Sicherheitshinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen. Das Ätzbad kann Löcher in der Kleidung verursachen, weshalb es ratsam ist alte Kleidung zu tragen.\\
 
 
 Das Platinenlayout wurde mit der kostenlosen Version von Eagle erstellt. Die Platine wurde komplett im FAUFabLab geätzt und bestückt. Die Leiterbahndicke beträgt 16\,mil, der Abstand der Massefläche zu den Leiterbahnen beträgt ebenfalls 16\,mil. Die Bohrlochdurchmesser der Vias und Löcher zum aufstecken der Bauteile beträgt 0,9\,mm. Das Boardlayout wurde auf Papier im FAUFabLab ausgedruckt und auf die kupferbeschichtete Seite der Platine gelegt. Anschließend werden diese zusammen für 09:40\,min in den Belichter gelegt.  Wichtig ist, dass man die Platinen vor dem Belichten an den Rändern entgratet, um ein gutes Belichtungsergebnis zu erreichen. Zudem ist darauf zu Achten, dass die Schutzfolie auf der Kupferseite, die mit dem Fotolack beschichtet ist, abzunehmen. Anschließend kommt die Platine in den Entwickler (NaOH) bis sich der Fotolack an den Stellen, an denen er mit UV-Licht belichtete wurde, ablöst. Nachdem die Platine gut mit Wasser abgespült wurde, wird sie in das Ätzbad (Natriumpersulfatlösung) gelegt. Wenn sich die Kupferschicht zwischen den Leiterbahnen komplett abgelöst hat sollte die Platine entnommen werden. Belässt man sie zu lange im Ätzbad besteht die Gefahr, dass zusätzlich Leiterbahnen angeätzt werden. Anschließend die Platine gut mit Wasser abwaschen und für 1:30min in den Belichter legen. Dannach noch ein letztes mal entwickeln und gut abwaschen. Anschließend die Platine ins Verzinnungsbad (Bungard SurTin chemische Verzinnungslösung) geben, um die Kupferschicht vor Korrosion zu schützen. Nun können die Löcher bebohrt und die Platine bestückt werden.
