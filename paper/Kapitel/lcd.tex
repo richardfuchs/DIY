@@ -1,10 +1,10 @@
 \section{LCD}
-\textbf{Sicherheitshinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen.\\
+\textbf{Sicherheitshinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen.
 \subsection{Funktionsweise}
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\linewidth, keepaspectratio]{Bilder/LCD_layers}
+  \includegraphics[height=0.3\textwidth, keepaspectratio]{Bilder/LCD_layers}
   \caption{Aufbau eines LCDs mit Polarisationsfolien (Markierung 1 und 5), zwei beschichteten, leitenden Glasplatten (Markierung 2 und 4), den Flüssigkristallen (Markierung 3) und einem Reflektor (Markierung 6) nach ref[FIXME REF]}
   \label{lcdaufbau}
 \end{figure}
@@ -42,22 +42,30 @@ Bei Raumtemperatur muss der Lack für 24h an einem dunklen Ort trocknen. Die Gla
 Auf mehreren Platten wurde der Fotolack in verschiednene Arten aufgetragen. Zum einen wurde ein Test für 1 bis zu 5 aufgetragenen Schichten durchlaufen. Des Weiteren wurden die Platten flach auf dem Boden liegend, sowie in einem 30 Grad Winkel besprüht.
 Mit letzerer Methode wurde das beste Ergebnis erzielt, da der Lack leicht nachlfließen konnte und sich somit am schönsten verteilt hat. Bei der Schichtdicke war es ausreichend eine einzelne Schicht aufzutragen.
 
-Nun werden die beschichteten Glasplatten in den Belichter gelegt und das Anzeigedesign, welches auf Papier ausgedruckt wurde, auf die beschitete Seite gelegt. Wie beim Belichten von Platinen ist eine Belichtungszeit von 9:40 min zu wählen. Da es sich um Glasplatten handelt, auf denen von beiden Seiten Licht durchdringen kann, ist umbedingt darauf zu Achten ein lichtundruchlässiges Objekt auf die nicht mit Fotolack beschichtete Seite zu legen (Beispielsweise eine schwarze Acrylplatte). Ansonsten wird die komplette Fotolackschicht belichtet. Anschließend wird der Fotolack entwickelt (NaOH, siehe Abschnitt \ref{subsec:platine}).\\
+Nun werden die beschichteten Glasplatten in den Belichter gelegt und das Anzeigedesign, welches auf Papier ausgedruckt wurde, auf die beschitete Seite gelegt. Wie beim Belichten von Platinen ist eine Belichtungszeit von 9:40 min zu wählen. Da es sich um Glasplatten handelt, auf denen von beiden Seiten Licht durchdringen kann, ist umbedingt darauf zu Achten ein lichtundurchlässiges Objekt auf die nicht mit Fotolack beschichtete Seite zu legen (Beispielsweise eine schwarze Acrylplatte). Ansonsten wird die komplette Fotolackschicht belichtet. Anschließend wird der Fotolack entwickelt (NaOH, siehe Abschnitt \ref{subsec:platine}).\\
 
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[height=0.2\textwidth, keepaspectratio]{Bilder/Fotolackverfahrenbeschichtet}
-  \caption{Mit Fotolack beschichtete Glasplatte}
-  \label{Fotolackbeschichtete Glasplatte}
-\end{figure}
+Abbildung \ref{Fotolackverfahren} zeigt, dass durch das Fotolackverfahren ein unscharfes Bild ensteht, da sich der Fotolack nicht gleichmäßig genug auf der Glasplatte verteilt.\\
 
 \begin{figure}[t]
   \centering
-  \includegraphics[height=0.2\textwidth, keepaspectratio]{Bilder/Fotolackverfahrengeaetzt}
-  \caption{Fotolackverfahren Aetzung}
-  \label{Fotolackverfahren Aetzung}
+  \includegraphics[width=\linewidth, keepaspectratio]{Bilder/Fotolackverfahren}
+  \caption{Glasplatte mit Fotoladck beschichtet (links) und nach der Ätzung (rechts)}
+  \label{Fotolackverfahren}
 \end{figure}
+
+%\begin{figure}[t]
+%  \centering
+%  \includegraphics[height=0.2\textwidth, keepaspectratio]{Bilder/Fotolackverfahrenbeschichtet}
+%  \caption{Mit Fotolack beschichtete Glasplatte}
+%  \label{Fotolackbeschichtete Glasplatte}
+%\end{figure}
+
+%\begin{figure}[t]
+%  \centering
+%  \includegraphics[height=0.2\textwidth, keepaspectratio]{Bilder/Fotolackverfahrengeaetzt}
+%  \caption{Fotolackverfahren Aetzung}
+%  \label{Fotolackverfahren Aetzung}
+%\end{figure}
 
 \subsubsection*{Klebefolie}\label{subsec:klebefolie}
 Muster werden entworfen und mit einem Plotter aus einer selbstklebenden Klebefolie ausgeschnitten. Das Muster wird auf einer Übertragungsfolie aufgebracht und auf die leitende Schicht der Glasplatten aufgeklebt, anschließend wird die Übertragungsfolie abgezogen. Nun sind alle Stellen, die später leuchten sollen, abgedeckt. Versuche haben bestätigt, dass die Klebefolie die leitende Indium-Zinn Schicht nicht entfernt oder merklich schädigt. Die Vorteile der Folie sind, dass komplexe Strukturen hergestellt werden können und sehr scharfe Kanten entstehen. Allerdings ist das anschließende Abziehen der Folie sehr mühsam.
@@ -140,7 +148,7 @@ Ein funktionierendes, aber sehr zeitaufwändiges, Verfahren ist die Oxidierung i
 Bei der maximalen Temperatur des Ofen von 230 Grad werden die Glasplatten mit der beschichteten Seite nach oben auf das Gitter gelegt. Wichtig ist, dass der Ofen maximal leicht vorgeheizt wurde, da zu starke Temperaturunterschiede die Glasplatten zum brechen bringen könnten. Nun wurden die Testplatten für 1:30h im Ofen belassen und anschließend für 30 min abgekühlt.
 Beide Indikatoren haben angeschlagen was zeigt, dass die Oxidierung erfolgreich war.\\
 
-Da dies das einzig funktionierende und effiziente Verfahren ist, wird es zur Herstellung der Displays eingesetzt.
+Da die Oxidierung im Ofen das einzig funktionierende und effiziente Verfahren ist, wird es zur Herstellung der Displays eingesetzt.
 
 \subsection{Ausrichtung der Glasplatten}
 
