@@ -16,7 +16,7 @@ Es gibt zwei ausschlaggebende Kriterien:
 Unter einer Rechteck-Wechselspannung von -2\,V - +2\,V wird die Anzeige zu schwach, um klar etwas erkennen zu können. Mit steigender Spannung nimmt nur die Schnelligkeit zu, mit der das Anzeigefeld angezeigt wird, die Intensität nimmt nicht weiter zu. Ab einer Spannung von 6V besteht die Gefahr, dass auch benachbarte Felder aufleuchten. So wurde bei unserem Testdesign (Abbildung \ref{testmuster}) \textit{Darth Vader} auf Platte 1 und die \textit{kleinen Rechtecken} auf Platte 2 angeschlossen. Die \textit{kleinen Rechtecken} wurden angezeigt.
 
 Die Stromstärken wurden mit einem Multimeter gemessen. Im Ruhezustand hat das Messgerät bereits einen Strom von -2\,$\mu$A 
- angezeigt. Wir bewegen uns im Microampereberreich weshalb die folgenden Messwerte nur als Richtwerte zu verstehen sind. Sie spiegeln aber sehr gut wieder, dass ein LCD sehr energiesparend ist.
+ angezeigt. Wir bewegen uns im Mikroamperebereich weshalb die folgenden Messwerte nur als Richtwerte zu verstehen sind. Sie spiegeln aber sehr gut wieder, dass ein LCD sehr energiesparend ist.
 
 \begin{table}[]
 	\centering
@@ -35,7 +35,7 @@ Die Stromstärken wurden mit einem Multimeter gemessen. Im Ruhezustand hat das M
 	\label{tab:volt}
 \end{table}
 
-Tabelle \ref{tab:volt} zeigt die Messungen der Stromstärken in Microampere der einzelnen Testanzeigedesigns bei einer angelegten Gleichspannung. Dies ist für einen Dauerbetrieb nicht zu empfehlen (siehe Abschnitt \ref{subsec:spannung}), wurde aber zur Vereinfachung der Messung so gewählt. Weshalb die Anzeige von “Darth Vader” so hohe Stromstärken aufweist ist noch unklar.
+Tabelle \ref{tab:volt} zeigt die Messungen der Stromstärken in Mikroampere der einzelnen Testanzeigedesigns bei einer angelegten Gleichspannung. Dies ist für einen Dauerbetrieb nicht zu empfehlen (siehe Abschnitt \ref{subsec:spannung}), wurde aber zur Vereinfachung der Messung so gewählt. Weshalb die Anzeige von “Darth Vader” so hohe Stromstärken aufweist ist noch unklar.
 
 \subsubsection{Frequenz}
 Zur Feststellung mit welcher Frequenz das LCD angesteuert werden sollte, haben wir eine Rechteckspannung mit unterschiedlichen Frequenzen an verschiedenen Elektroden angelegt. Unter einer Frequenz von 30\,Hz fängt die Anzeige an zu flackern, da das menschliche Auge dort das Umschalten feststellen kann. Über einer Frequenz von 1\,MHz lässt die Intensität merklich nach. Um den Mikrocontroller stromsparend benutzen zu können, sollte aber eine möglichst geringe Frequenz verwendet werden.
@@ -78,10 +78,10 @@ Kupferfolie wäre eine weitere Idee, die allerdings noch nicht getestet wurde.
 Die Platine (Schaltplan siehe Abbildung \ref{shematic}) dienst zur Ansteuerung des LCD und soll es ermöglichen, die Uhr zu stellen und die richtige Uhrzeit anzuzeigen. Es soll die Möglichkeit geben das Display nicht nur im BCD Format zu betreiben, sondern auch in anderen Formaten, wie zum Beispiel rein binär.
 
 \subsubsection{Wahl des Mikrocontrollers}
-Der Mikrocontroller muss mindestens zwei Eingänge für zwei Taster zur Uhrzeitstellung zur Verfügung stellen. Des Weiteren werden 4 weitere Pins für den Anschluss der ISP Schnittstelle zum Programmieren des Mikrocontrollers benötigt. Je nach Anzahl der anzuzeigenden Symbole und ob das Multiplexverfahren verwendet wird oder nicht,  sind noch zustätzliche Ausgänge nötig. Wenn man den Mikrocontroller der Atmel-Reihe verwendet, ist des Weiteren auf die Endbezeichnung P zu achten, da der Mikrocontroller dann stromsparender ist. Außerdem muss der Versorgungsspannungsbereich in dem von der Batterie zur Verfügung gestelltem Bereich liegen. Deshalb wurde für dieses Projekt der \cite[ATmega88PA]{atmel88pa} gewählt.
+Der Mikrocontroller muss mindestens zwei Eingänge für zwei Taster zur Uhrzeitstellung zur Verfügung stellen. Des Weiteren werden 4 weitere Pins für den Anschluss der ISP Schnittstelle zum Programmieren des Mikrocontrollers benötigt. Je nach Anzahl der anzuzeigenden Symbole und ob das Multiplexverfahren verwendet wird oder nicht,  sind noch zusätzliche Ausgänge nötig. Wenn man den Mikrocontroller der Atmel-Reihe verwendet, ist des Weiteren auf die Endbezeichnung P zu achten, da der Mikrocontroller dann stromsparender ist. Außerdem muss der Versorgungsspannungsbereich in dem von der Batterie zur Verfügung gestelltem Bereich liegen. Deshalb wurde für dieses Projekt der \cite[ATmega88PA]{atmel88pa} gewählt.
 
 \subsubsection{Wahl der Bauteile}
-Um die Uhrzeit so exakt wie möglich zu erhalten, wurde eine spezieller 32,768\,kHz Quartz verwendet, der auf Uhrenandwendungen spezialisiert ist. Bis auf den Mikrokontroller und dem Quartz wurden nur SMD Bauteile verwendet, um die Platine zu einem späteren Zeitpunkt komplett auf SMD Bauteile umstellen zu können. Zum Entprellen der Taster wurde jeweils ein 100\,nF Kondensator parallel geschlossen. Der Eingang der Spannungsversorgung (VCC, AVCC) wurde ebenfalls mit je einem 100\,nF Kondensator versehen, um eine stabile Eingangsspannung zu gewährleisten. Der Pin Aref wurde über einen Kondensator mit 100\,nF auf Masse gezogen. Dieser Kontakt kann dazu genutzt werden, um den Batteriestand festzustellen. Für die SMD Bauteile wurde eine Größe von 0805 gewählt.
+Um die Uhrzeit so exakt wie möglich zu erhalten, wurde eine spezieller 32,768\,kHz Quartz verwendet, der auf Uhrenandwendungen spezialisiert ist. Bis auf den Mikrocontroller und dem Quartz wurden nur SMD Bauteile verwendet, um die Platine zu einem späteren Zeitpunkt komplett auf SMD Bauteile umstellen zu können. Zum Entprellen der Taster wurde jeweils ein 100\,nF Kondensator parallel geschlossen. Der Eingang der Spannungsversorgung (VCC, AVCC) wurde ebenfalls mit je einem 100\,nF Kondensator versehen, um eine stabile Eingangsspannung zu gewährleisten. Der Pin Aref wurde über einen Kondensator mit 100\,nF auf Masse gezogen. Dieser Kontakt kann dazu genutzt werden, um den Batteriestand festzustellen. Für die SMD Bauteile wurde eine Größe von 0805 gewählt.
 
 \subsubsection{Herstellung der Platine}
 
