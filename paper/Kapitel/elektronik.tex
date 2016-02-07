@@ -75,7 +75,7 @@ Kupferfolie wäre eine weitere Idee, die allerdings noch nicht getestet wurde.
 \subsection{Platine}\label{subsec:platine}
 
 \subsubsection{Anforderungen}
-Die Platine dienst zur Ansteuerung des LCD und soll es ermöglichen, die Uhr zu stellen und die richtige Uhrzeit anzuzeigen. Es soll die Möglichkeit geben das Display nicht nur im BCD Format zu betreiben, sondern auch in anderen Formaten, wie zum Beispiel rein binär.
+Die Platine (Schaltplan siehe Abbildung \ref{shematic}) dienst zur Ansteuerung des LCD und soll es ermöglichen, die Uhr zu stellen und die richtige Uhrzeit anzuzeigen. Es soll die Möglichkeit geben das Display nicht nur im BCD Format zu betreiben, sondern auch in anderen Formaten, wie zum Beispiel rein binär.
 
 \subsubsection{Wahl des Mikrocontrollers}
 Der Mikrocontroller muss mindestens zwei Eingänge für zwei Taster zur Uhrzeitstellung zur Verfügung stellen. Des Weiteren werden 4 weitere Pins für den Anschluss der ISP Schnittstelle zum Programmieren des Mikrocontrollers benötigt. Je nach Anzahl der anzuzeigenden Symbole und ob das Multiplexverfahren verwendet wird oder nicht,  sind noch zustätzliche Ausgänge nötig. Wenn man den Mikrocontroller der Atmel-Reihe verwendet, ist des Weiteren auf die Endbezeichnung P zu achten, da der Mikrocontroller dann stromsparender ist. Außerdem muss der Versorgungsspannungsbereich in dem von der Batterie zur Verfügung gestelltem Bereich liegen. Deshalb wurde für dieses Projekt der \cite[ATmega88PA]{atmel88pa} gewählt.
@@ -85,7 +85,7 @@ Um die Uhrzeit so exakt wie möglich zu erhalten, wurde eine spezieller 32,768\,
 
 \subsubsection{Herstellung der Platine}
 
-Das Platinenlayout wurde mit der kostenlosen Version von Eagle erstellt. Anschließend wurde die komplette Platine im FAUFabLab gefertigt. Eine Anleitung hierzu befindet sich auf der Homepage des \cite[FAUFabLab]{fablabwerkzeuge}, weshalb hier nicht näher darauf eingegangen wird.
+Das Platinenlayout (Abbildung \ref{board}) wurde mit der kostenlosen Version von Eagle erstellt. Anschließend wurde die komplette Platine im FAUFabLab gefertigt. Eine Anleitung hierzu befindet sich auf der Homepage des \cite[FAUFabLab]{fablabwerkzeuge}, weshalb hier nicht näher darauf eingegangen wird.
 
 %\textbf{Sicherheitshinweis:} Vorsicht beim Umgang mit den Chemikalien und immer eine Schutzbrille tragen. Das Ätzbad kann Löcher in der Kleidung verursachen, weshalb es ratsam ist alte Kleidung zu tragen.\\
 
